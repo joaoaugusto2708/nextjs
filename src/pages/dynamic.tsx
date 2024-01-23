@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from "next"
 import { ReactNode, useEffect, useState } from "react"
 import { Col, Container, Row } from "reactstrap"
-
+//Os dados são gerados dinamicamente toda vez que realiza requisição no servidor
 type ApiResponse = {
   name: string
   timestamp: Date

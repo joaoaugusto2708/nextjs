@@ -1,7 +1,7 @@
 import { GetServerSideProps, GetStaticProps, NextPage } from "next"
 import { ReactNode, useEffect, useState } from "react"
 import { Col, Container, Row } from "reactstrap"
-
+//Paginas com dados carregados no build são imutáveis
 type ApiResponse = {
   name: string
   timestamp: Date
@@ -12,7 +12,8 @@ export const getStaticProps: GetStaticProps = async () => {
     return { 
         props: { 
             staticData
-        }
+        },
+        revalidate: 10
     }
 }//Gerado de estaticamente no build
 const Dynamic: NextPage = (props: { 
