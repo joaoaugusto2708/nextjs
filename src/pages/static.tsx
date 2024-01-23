@@ -13,6 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
         props: { 
             staticData
         },
+        //Revalida os dados de 10 em 10 segundos
         revalidate: 10
     }
 }//Gerado de estaticamente no build
